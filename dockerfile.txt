@@ -1,0 +1,36 @@
+Docker File:
+
+1: to create docker file
+step 1: createa Dockerfile 
+Cmd: vi Dockerfile
+2
+step
+: follow the steps to create docker image
+Step:
+ Docker working dirictory
+cd /var/lib/docker/
+step:
+ To check container logs
+ cmd: docker logs ******(Container is)
+step:
+ to build tha image  
+cmd: 
+docker build -t ****:1 .(imagename:tag .) .
+step:
+To tun image as container
+cmd:
+docker run ****(imagename)
+step:
+*** MAINTAINER --> It's will be used as commnets to describe author/owner who is maintaning docker file.
+-------------
+***COPY --> Using COPY we can copy files/folders to the image. Files/Folders will be copied while creating an image.
+            It will copy local files from host server(docker server)from where we are building image to the image while creating a image.
+SYTNAX:
+======
+COPY <source>                <destination> 
+      ServerFile/FolderPath   PathInsideImage
+EX:
+COPY target/java-web-app.war /usr/local/tomcat/webapps/java-web-app.war
+------
+
+
